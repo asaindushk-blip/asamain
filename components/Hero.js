@@ -13,7 +13,7 @@ const Hero = () => {
         className="absolute mx-auto text-6xl font-medium text-left text-white md:w-3/5 md:top-72 top-60"
         style={{ left: "5%" }}
       >
-        Precision Electrical Stamping Die Casted Rotors<br></br> Sheet Metal Components
+        Precision Electrical Stamping Die Casted Rotors</br> Sheet Metal Components
       </h3>
     </div>
   );
