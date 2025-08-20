@@ -19,7 +19,7 @@ const Hero = () => {
           Delivering Excellence<br /> Since 1985
         </h2>
         <p className="mt-4 text-lg font-light">
-         Leading Manufacturer of Rotor, Stator, Sheet Metal, and Die-Cast Components
+         Leading Manufacturer of Rotor, Stator, Sheet Metal, and Die-Casted Components
         </p>
       </div>
     </div>
