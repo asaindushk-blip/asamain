@@ -12,7 +12,6 @@ const Hero = () => {
           <h3 className="absolute w-1/5 text-6xl font-medium text-Green top-96 left-32">
                 Electrical Stamping</br>
                 Die Casted Rotors</br>
-                Sheet Metal Components</br>
             </h3>
       
   
