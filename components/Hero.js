@@ -15,8 +15,10 @@ const Hero = () => {
       >
         Delivering Excellence<br></br> Since 1985
       </h3>
-  <p>
-     Forefront of Rotor, Stator, Die-Casted & Sheet Metal component manufacturer.<p>
+  >
+      <p>
+     Forefront of Rotor, Stator, Die-Casted & Sheet Metal component manufacturer.
+  </p>
   
     </div>
   );
