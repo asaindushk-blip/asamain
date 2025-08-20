@@ -9,10 +9,10 @@ const Hero = () => {
         alt="ASA Industries Hero Image"
         className="opacity-50 filter brightness-75 drop-shadow-md saturate-60"
       ></img>
-          <h3 className="absolute w-1/5 text-6xl font-medium text-Green top-96 left-32">
-                Electrical Stamping</br>
-                Die Casted Rotors</br>
-                Sheet Metal Compenents</br>
+          <h3 class="absolute mx-auto text-6xl font-medium text-left text-white md:w-3/5 md:top-72 top-60" style="left:5%">Delivering Excellence<br> Since 1985</h3>
+          Delivering Excellence
+            <br>
+             "Since 1985"
             </h3>
       
   
