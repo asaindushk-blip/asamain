@@ -10,28 +10,32 @@ const slides = [
       "Leading Manufacturer of Rotor, Stator, Sheet Metal and Die-Casted Components.",
   },
   {
-    image: "hero1.png",
-    alt: "Electrical Stamping Process",
+    image: "hero2.png",
+    alt: "Electrical Stamping Manufacturer",
     heading: "Precision Engineering at Scale",
-    description: "High-quality stamping, die-casting, and motor components trusted worldwide.",
+    description:
+      "High-quality stamping, die-casting, and motor components trusted worldwide.",
   },
   {
-    image: "hero1.png",
+    image: "hero3.png",
     alt: "Motor Lamination Manufacturing",
     heading: "Innovation That Drives Motors",
-    description: "Supplying global industries with innovative motor solutions.",
+    description:
+      "Supplying global industries with innovative motor solutions.",
   },
   {
-    image: "hero1.png",
-    alt: "Sheet Metal Components Manufacturing",
+    image: "hero4.png",
+    alt: "Sheet Metal Components",
     heading: "Cutting-Edge Sheet Metal Solutions",
-    description: "Delivering reliable and durable sheet metal components for industrial use.",
+    description:
+      "Reliable and durable sheet metal components for industrial use.",
   },
   {
-    image: "hero1.png",
-    alt: "Die Casting and Progressive Tooling",
+    image: "hero5.png",
+    alt: "Die Casting and Tooling",
     heading: "Excellence in Die Casting",
-    description: "Expertise in progressive tooling and die casting for modern industries.",
+    description:
+      "Expertise in progressive tooling and die casting for modern industries.",
   },
 ];
 
@@ -46,10 +50,10 @@ const Hero = () => {
     return () => clearInterval(timer);
   }, []);
 
-  // Manual navigation
   const prevSlide = () => {
     setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
   };
+
   const nextSlide = () => {
     setCurrent((prev) => (prev + 1) % slides.length);
   };
@@ -73,7 +77,8 @@ const Hero = () => {
             className="w-full h-full object-cover brightness-75"
             loading="lazy"
           />
-          {/* Text Overlay */}
+
+          {/* Slide Content */}
           {index === current && (
             <div className="absolute top-1/3 left-[5%] w-4/5 md:w-3/5 text-white drop-shadow-lg">
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
