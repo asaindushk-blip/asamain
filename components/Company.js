@@ -4,7 +4,7 @@ const Company = () => {
       className="mr-24 ml-20 md:mt-40 mt-60"
       id="company-overview"
       itemScope
-      itemType="https://schema.org/Organization"
+      itemType="https://asaindus.com"
     >
       <div className="md:grid md:grid-cols-2 gap-12 md:text-lg text-4xl">
         
@@ -22,9 +22,9 @@ const Company = () => {
           <p className="pb-4" itemProp="description">
             <strong>ASA Industries</strong> is a leading{" "}
             <span className="font-medium">
-              manufacturer of magnetic cores and die-casted components
+              manufacturer of magnetic cores, rotor & stator laminations, sheet metal parts, and die-casted components
             </span>. With{" "}
-            <span className="font-medium">We Have 03 modern manufacturing units across India.</span>, 
+            <span className="font-medium">three modern manufacturing units across India</span>, 
             we deliver precision-engineered products for{" "}
             <span className="font-medium">electric motors, transformers, alternators, and generators</span>.
           </p>
@@ -34,7 +34,7 @@ const Company = () => {
             <span className="font-medium">most trusted stamping manufacturers</span>, 
             ASA Industries supplies components to top Indian and international brands. 
             Our expertise spans{" "}
-            <span className="font-medium">electrical stamping, lamination stamping processes, progressive die tooling, and die casting</span>.
+            <span className="font-medium">electrical stamping, lamination stamping processes, stamping dies, progressive die tooling, and die casting</span>.
           </p>
 
           <p>
