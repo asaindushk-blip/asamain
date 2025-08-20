@@ -7,7 +7,7 @@ const Hero = () => {
       <img
         src="hero.png"
         alt="ASA Industries Hero Image"
-        className="opacity-40 filter brightness-75 drop-shadow-md saturate-60"
+        className="opacity-50 filter brightness-75 drop-shadow-md saturate-60"
       />
 
       {/* Text container for heading + paragraph */}
