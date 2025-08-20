@@ -1,99 +1,95 @@
 import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+
+const slides = [
+  {
+    image: "hero1.png",
+    alt: "Rotor and Stator Manufacturing - ASA Industries",
+    heading: "Delivering Excellence Since 1985",
+    description:
+      "Leading Manufacturer of Rotor, Stator, Sheet Metal and Die-Casted Components.",
+  },
+  {
+    image: "hero2.png",
+    alt: "Electrical Stamping and Die Casting",
+    heading: "Precision Engineering at Scale",
+    description:
+      "High-quality stamping, die-casting, and motor components trusted worldwide.",
+  },
+  {
+    image: "hero3.png",
+    alt: "Sheet Metal and Motor Components",
+    heading: "Innovation That Drives Motors",
+    description:
+      "Supplying global industries with innovative motor solutions.",
+  },
+];
 
 const Hero = () => {
-  const images = [
-    "hero1.png",
-    "hero2.png",
-    "hero3.png",
-    "hero4.png",
-    "hero5.png",
-    "hero6.png",
-    "hero7.png",
-    "hero8.png",
-    "hero9.png",
-    "hero10.png",
-  ];
+  const [current, setCurrent] = useState(0);
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  // Auto slide every 4 seconds
+  // Auto slide every 5 seconds
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 4000);
-    return () => clearInterval(interval);
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
   }, []);
 
-  const prevSlide = () => {
-    setCurrentIndex((prev) =>
-      prev === 0 ? images.length - 1 : prev - 1
-    );
-  };
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % images.length);
-  };
-
   return (
-    <div
-      className="relative w-screen h-[90vh] overflow-hidden bg-[#000C56] top-0 lg:top-20"
+    <section
       id="Intro"
+      className="relative w-screen h-[90vh] overflow-hidden bg-[#000C56]"
     >
-      {/* Slider wrapper */}
-      <div
-        className="flex transition-transform duration-700 ease-in-out"
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-      >
-        {images.map((src, idx) => (
+      {/* Slide Images */}
+      {slides.map((slide, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 transition-opacity duration-1000 ${
+            index === current ? "opacity-100" : "opacity-0"
+          }`}
+        >
           <img
-            key={idx}
-            src={src}
-            alt={`Hero Slide ${idx + 1}`}
-            className="w-screen h-[90vh] object-cover opacity-70"
+            src={slide.image}
+            alt={slide.alt}
+            className="w-full h-full object-cover brightness-75"
+            loading="lazy"
           />
-        ))}
-      </div>
+        </div>
+      ))}
 
-      {/* Text overlay */}
-      <div
-        className="absolute top-1/2 left-10 transform -translate-y-1/2 text-white md:w-3/5"
-      >
-        <h2 className="text-4xl md:text-6xl font-medium">
-          Delivering Excellence <br /> Since 1985
-        </h2>
-        <p className="mt-4 text-lg font-light">
-          Leading Manufacturer of Rotor, Stator, Sheet Metal and Die-Casted Components.
+      {/* Text Overlay */}
+      <div className="absolute top-1/3 left-[5%] w-4/5 md:w-3/5 text-white drop-shadow-lg">
+        <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+          {slides[current].heading}
+        </h1>
+        <p className="mt-4 text-lg md:text-xl font-light">
+          {slides[current].description}
         </p>
       </div>
 
-      {/* Prev/Next buttons */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/40 hover:bg-black/70 text-white"
-      >
-        <ChevronLeft size={30} />
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/40 hover:bg-black/70 text-white"
-      >
-        <ChevronRight size={30} />
-      </button>
-
-      {/* Dots */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-2">
-        {images.map((_, idx) => (
-          <div
-            key={idx}
-            onClick={() => setCurrentIndex(idx)}
-            className={`w-3 h-3 rounded-full cursor-pointer ${
-              currentIndex === idx ? "bg-white" : "bg-gray-400"
+      {/* Navigation Dots */}
+      <div className="absolute bottom-10 w-full flex justify-center gap-2">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrent(index)}
+            className={`w-3 h-3 rounded-full ${
+              index === current ? "bg-white" : "bg-gray-400"
             }`}
-          ></div>
+            aria-label={`Go to slide ${index + 1}`}
+          ></button>
         ))}
       </div>
-    </div>
+
+      {/* Hidden SEO keywords */}
+      <span className="sr-only">
+        motor components, rotor stator, electrical stamping, motor stamping, stamping manufacturer, 
+        stamping manufacturers, stamping manufacturing, electrical stamping manufacturers, 
+        lamination stamping process, stamping dies, progressive die, stamping tooling, 
+        induction motors, sheet metal, die casting, brushless dc motors, universal motors, 
+        shaded pole motors, die casting company in Noida
+      </span>
+    </section>
   );
 };
 
