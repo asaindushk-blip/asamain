@@ -15,11 +15,11 @@ const Hero = () => {
         className="absolute mx-auto text-left text-white md:w-3/5 md:top-72 top-60"
         style={{ left: "5%" }}
       >
-        <h3 className="text-6xl font-medium">
+        <h2 className="text-6xl font-medium">
           Delivering Excellence<br /> Since 1985
-        </h3>
+        </h2>
         <p className="mt-4 text-lg font-light">
-          Rotor, Stator, Die-Casted & Sheet Metal component manufacturer.
+         Leading Manufacturer of Rotor, Stator, Sheet Metal, and Die-Cast Components
         </p>
       </div>
     </div>
