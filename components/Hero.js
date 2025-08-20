@@ -8,14 +8,16 @@ const Hero = () => {
         src="hero.png"
         alt="ASA Industries Hero Image"
         className="opacity-40 filter brightness-75 drop-shadow-md saturate-60"
-      ></img>
+      />
+
       <h3
         className="absolute mx-auto text-6xl font-medium text-left text-white md:w-3/5 md:top-72 top-60"
         style={{ left: "5%" }}
       >
-        Delivering Excellence<br></br> Since 1985
+        Delivering Excellence<br /> Since 1985
       </h3>
-  <p
+
+      <p
         className="absolute mx-auto text-lg font-light text-left text-white md:w-3/5 md:top-[22rem] top-[19rem]"
         style={{ left: "5%" }}
       >
@@ -24,4 +26,6 @@ const Hero = () => {
     </div>
   );
 };
+
 export default Hero;
+
