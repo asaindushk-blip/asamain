@@ -23,9 +23,9 @@ const Hero_Products = ({ props }) => {
           ASA Industries offers a wide range of{" "}
           <span className="font-medium">motor components, rotor & stator laminations, electrical stampings, die-casted parts, and sheet metal assemblies</span>. 
           Our products support{" "}
-          <span className="font-medium">induction motors, brushless DC motors, universal motors, shaded pole motors, alternators, and transformers</span>, 
+          <span className="font-medium">Induction Motors, Brushless DC Motors, Universal Motors, Shaded Pole Motors, Alternators, and Transformers</span>, 
           making us one of the most trusted{" "}
-          <span className="font-medium">stamping and die casting manufacturers in Noida, India</span>.
+          <span className="font-medium">stamping and die casting manufacturers in Noida,Hyderabad, India</span>.
         </p>
       </div>
 
