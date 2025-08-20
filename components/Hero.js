@@ -16,10 +16,10 @@ const Hero = () => {
         style={{ left: "5%" }}
       >
         <h2 className="text-6xl font-medium">
-          Leading Manufacturer of Rotor, Stator, Sheet Metal<br /> and Die-Casted Components
+          Delivering Excellence<br /> Since 1985
         </h2>
         <p className="mt-4 text-lg font-light">
-         Delivering Excellence Since 1985
+         Leading Manufacturer of Rotor Stator Sheet Metal and Die-Casted Components
         </p>
       </div>
     </div>
