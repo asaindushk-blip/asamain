@@ -22,11 +22,6 @@ const Hero = () => {
           Leading Manufacturer of Rotor, Stator, Sheet Metal and Die-Casted Components.
         </p>
 
-        {/* SEO Keyword-rich supporting text */}
-        <p className="mt-4 text-sm opacity-80 max-w-3xl">
-          
-        </p>
-
         {/* Hidden SEO keywords (Google can index, users don’t see them) */}
         <span className="sr-only">
           motor components, rotor stator, electrical stamping, motor stamping, stamping manufacturer, 
