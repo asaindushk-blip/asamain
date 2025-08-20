@@ -22,14 +22,7 @@ const Hero_Process = () => {
         >
           Manufacturing Processes
         </h1>
-        <p className="mt-6 text-lg font-light text-white max-w-2xl" itemProp="description">
-          ASA Industries specializes in advanced{" "}
-          <span className="font-medium">electrical stamping, rotor & stator lamination, die casting, and sheet metal fabrication</span>. 
-          Our processes include{" "}
-          <span className="font-medium">progressive die tooling, stamping dies, and precision manufacturing</span>, 
-          delivering world-class components for{" "}
-          <span className="font-medium">induction motors, brushless DC motors, universal motors, and shaded pole motors</span>.
-        </p>
+     
       </div>
 
       {/* Hidden SEO Keywords */}
