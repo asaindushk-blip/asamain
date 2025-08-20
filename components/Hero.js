@@ -24,12 +24,7 @@ const Hero = () => {
 
         {/* SEO Keyword-rich supporting text */}
         <p className="mt-4 text-sm opacity-80 max-w-3xl">
-          We specialize in motor components, rotor stator assemblies, electrical stamping, 
-          motor stamping, and precision stamping manufacturing. As trusted stamping manufacturers, 
-          we excel in lamination stamping processes, stamping dies, progressive die solutions, 
-          and advanced stamping tooling. Our expertise covers induction motors, sheet metal fabrication, 
-          die casting, brushless DC motors, universal motors, and shaded pole motors. Recognized as a 
-          leading die casting company in Noida, we deliver high-quality components for global industries.
+          
         </p>
 
         {/* Hidden SEO keywords (Google can index, users don’t see them) */}
