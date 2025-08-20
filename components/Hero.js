@@ -7,7 +7,7 @@ const Hero = () => {
       <img
         src="hero.png"
         alt="ASA Industries Hero Image"
-        className="opacity-30 filter brightness-75 drop-shadow-md saturate-60"
+        className="opacity-50 filter brightness-75 drop-shadow-md saturate-60"
       ></img>
           <h3 className="absolute w-1/5 text-6xl font-medium text-Green top-96 left-32">
                 Electrical Stamping</br>
