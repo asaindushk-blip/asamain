@@ -12,7 +12,7 @@ const About = () => {
         <article className="pr-20 md:mb-auto mb-16">
           <header>
             <h1 className="md:text-4xl text-6xl md:font-normal font-black pb-16" itemProp="name">
-              About ASA Industries
+              About Us
             </h1>
           </header>
 
