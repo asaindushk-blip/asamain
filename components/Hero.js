@@ -10,21 +10,20 @@ const Hero = () => {
         className="opacity-40 filter brightness-75 drop-shadow-md saturate-60"
       />
 
-      <h3
-        className="absolute mx-auto text-6xl font-medium text-left text-white md:w-3/5 md:top-72 top-60"
+      {/* Text container for heading + paragraph */}
+      <div
+        className="absolute mx-auto text-left text-white md:w-3/5 md:top-72 top-60"
         style={{ left: "5%" }}
       >
-        Delivering Excellence<br /> Since 1985
-      </h3>
-       <p
-         className="absolute mx-auto text-6xl font-medium text-left text-white md:w-3/5 md:top-72 top-60"
-        style={{ left: "5%" }}
-      >
-        Rotor, Stator, Die-Casted & Sheet Metal component manufacturer.
-      </p>
+        <h3 className="text-6xl font-medium">
+          Delivering Excellence<br /> Since 1985
+        </h3>
+        <p className="mt-4 text-lg font-light">
+          Rotor, Stator, Die-Casted & Sheet Metal component manufacturer.
+        </p>
+      </div>
     </div>
   );
 };
 
 export default Hero;
-
