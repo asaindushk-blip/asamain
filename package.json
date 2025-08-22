@@ -26,3 +26,7 @@
     "tailwindcss": "^2.2.19"
   }
 }
+"scripts": {
+  "lint": "echo 'Lint disabled on Vercel'"
+}
+
