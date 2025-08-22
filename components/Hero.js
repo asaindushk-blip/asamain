@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 const slides = [
   {
@@ -25,29 +24,16 @@ const slides = [
   },
 ];
 
-function Hero() {
+const Hero = () => {
   const [current, setCurrent] = useState(0);
 
-  // Auto-slide every 5 seconds
+  // Auto slide every 5 seconds
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
     }, 5000);
-
-    return () => {
-      clearInterval(timer);
-    };
+    return () => clearInterval(timer);
   }, []);
-
-  const prevSlide = () => {
-    setCurrent((prev) =>
-      prev === 0 ? slides.length - 1 : prev - 1
-    );
-  };
-
-  const nextSlide = () => {
-    setCurrent((prev) => (prev + 1) % slides.length);
-  };
 
   return (
     <section
@@ -57,7 +43,6 @@ function Hero() {
       {/* Slide Images */}
       {slides.map((slide, index) => (
         <div
-          // eslint-disable-next-line react/no-array-index-key
           key={index}
           className={`absolute inset-0 transition-opacity duration-1000 ${
             index === current ? "opacity-100" : "opacity-0"
@@ -82,55 +67,30 @@ function Hero() {
         </p>
       </div>
 
-      {/* Left Arrow */}
-      <button
-        type="button"
-        onClick={prevSlide}
-        aria-label="Previous Slide"
-        className="absolute top-1/2 left-5 transform -translate-y-1/2 
-                   bg-black/40 hover:bg-black/70 p-3 rounded-full text-white"
-      >
-        <FiChevronLeft size={28} />
-      </button>
-
-      {/* Right Arrow */}
-      <button
-        type="button"
-        onClick={nextSlide}
-        aria-label="Next Slide"
-        className="absolute top-1/2 right-5 transform -translate-y-1/2 
-                   bg-black/40 hover:bg-black/70 p-3 rounded-full text-white"
-      >
-        <FiChevronRight size={28} />
-      </button>
-
       {/* Navigation Dots */}
       <div className="absolute bottom-10 w-full flex justify-center gap-2">
         {slides.map((_, index) => (
           <button
-            // eslint-disable-next-line react/no-array-index-key
             key={index}
-            type="button"
             onClick={() => setCurrent(index)}
             className={`w-3 h-3 rounded-full ${
               index === current ? "bg-white" : "bg-gray-400"
             }`}
             aria-label={`Go to slide ${index + 1}`}
-          />
+          ></button>
         ))}
       </div>
 
-      {/* Hidden SEO Keywords */}
+      {/* Hidden SEO keywords */}
       <span className="sr-only">
-        motor components, rotor stator, electrical stamping, motor stamping,
-        stamping manufacturer, stamping manufacturers, stamping manufacturing,
-        electrical stamping manufacturers, lamination stamping process,
-        stamping dies, progressive die, stamping tooling, induction motors,
-        sheet metal, die casting, brushless dc motors, universal motors,
+        motor components, rotor stator, electrical stamping, motor stamping, stamping manufacturer, 
+        stamping manufacturers, stamping manufacturing, electrical stamping manufacturers, 
+        lamination stamping process, stamping dies, progressive die, stamping tooling, 
+        induction motors, sheet metal, die casting, brushless dc motors, universal motors, 
         shaded pole motors, die casting company in Noida
       </span>
     </section>
   );
-}
+};
 
 export default Hero;
