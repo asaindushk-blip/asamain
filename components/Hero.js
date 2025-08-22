@@ -75,8 +75,8 @@ const Hero = () => {
           <Image
             src={slide.image}
             alt={slide.alt}
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: "cover" }}
             className="brightness-75"
             priority={index === 0}
           />
