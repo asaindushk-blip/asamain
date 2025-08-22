@@ -3,35 +3,35 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
   {
-    image: "hero1.png",
+    image: "hero.png",
     alt: "ASA Industries Rotor and Stator Components",
     heading: "Delivering Excellence Since 1985",
     description:
       "Leading Manufacturer of Rotor, Stator, Sheet Metal and Die-Casted Components.",
   },
   {
-    image: "hero2.png",
+    image: "hero.png",
     alt: "Electrical Stamping Manufacturer",
     heading: "Precision Engineering at Scale",
     description:
       "High-quality stamping, die-casting, and motor components trusted worldwide.",
   },
   {
-    image: "hero3.png",
+    image: "hero.png",
     alt: "Motor Lamination Manufacturing",
     heading: "Innovation That Drives Motors",
     description:
       "Supplying global industries with innovative motor solutions.",
   },
   {
-    image: "hero4.png",
+    image: "hero.png",
     alt: "Sheet Metal Components",
     heading: "Cutting-Edge Sheet Metal Solutions",
     description:
       "Reliable and durable sheet metal components for industrial use.",
   },
   {
-    image: "hero5.png",
+    image: "hero.png",
     alt: "Die Casting and Tooling",
     heading: "Excellence in Die Casting",
     description:
