@@ -1,37 +1,38 @@
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
   {
-    image: "hero.png",
+    image: "/hero.png",
     alt: "ASA Industries Rotor and Stator Components",
     heading: "Delivering Excellence Since 1985",
     description:
       "Leading Manufacturer of Rotor, Stator, Sheet Metal and Die-Casted Components.",
   },
   {
-    image: "hero.png",
+    image: "/hero.png",
     alt: "Electrical Stamping Manufacturer",
     heading: "Precision Engineering at Scale",
     description:
       "High-quality stamping, die-casting, and motor components trusted worldwide.",
   },
   {
-    image: "hero.png",
+    image: "/hero.png",
     alt: "Motor Lamination Manufacturing",
     heading: "Innovation That Drives Motors",
     description:
       "Supplying global industries with innovative motor solutions.",
   },
   {
-    image: "hero.png",
+    image: "/hero.png",
     alt: "Sheet Metal Components",
     heading: "Cutting-Edge Sheet Metal Solutions",
     description:
       "Reliable and durable sheet metal components for industrial use.",
   },
   {
-    image: "hero.png",
+    image: "/hero.png",
     alt: "Die Casting and Tooling",
     heading: "Excellence in Die Casting",
     description:
@@ -71,11 +72,13 @@ const Hero = () => {
             index === current ? "opacity-100 z-10" : "opacity-0 z-0"
           }`}
         >
-          <img
+          <Image
             src={slide.image}
             alt={slide.alt}
-            className="w-full h-full object-cover brightness-75"
-            loading="lazy"
+            layout="fill"
+            objectFit="cover"
+            className="brightness-75"
+            priority={index === 0}
           />
 
           {/* Slide Content */}
