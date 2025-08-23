@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 const slides = [
   {
