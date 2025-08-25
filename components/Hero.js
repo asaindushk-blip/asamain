@@ -1,31 +1,64 @@
+import Image from "next/image";
+
 const Hero = () => {
   return (
     <section
       id="intro"
-      className="relative grid w-screen grid-rows-1 bg-[#000C56] lg:top-20 top-0 md:object-cover"
-      aria-label="ASA Industries Introduction Section"
+      className="relative grid w-screen grid-rows-1 bg-[#000C56] lg:top-20 top-0"
+      aria-labelledby="hero-heading"
     >
-      <img
-        src="hero.png"
-        alt="ASA Industries manufacturing excellence hero banner"
-        title="ASA Industries Hero Image"
-        className="opacity-40 filter brightness-75 drop-shadow-md saturate-60 w-full h-auto object-cover"
-      />
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/hero.png"
+          alt="Manufacturer of Electrical Stamping, Die Casted Rotor, Stator and Sheet Metal Components for Electrical Appliances"
+          title="ASA Industries - Leading Stamping Manufacturer and Die Casting Company in Noida"
+          className="opacity-40 filter brightness-75 drop-shadow-md saturate-60 object-cover"
+          fill
+          priority
+        />
+      </div>
 
-      <h1
-        className="absolute mx-auto text-4xl md:text-6xl font-semibold text-left text-white leading-snug md:w-3/5 md:top-72 top-60"
-        style={{ left: "5%" }}
-      >
-        Delivering Excellence <br /> Since 1985
-      </h1>
-      
-      <p
-        className="absolute text-lg md:text-xl text-white md:w-2/5 md:top-[26rem] top-[22rem] leading-relaxed"
-        style={{ left: "5%" }}
-      >
-        ASA Industries is a trusted manufacturer of rotor, stator, and sheet metal
-        components, providing world-class solutions for global industries.
-      </p>
+      {/* Content */}
+      <div className="relative z-10 max-w-6xl mx-auto px-6 py-24">
+        <h1
+          id="hero-heading"
+          className="text-4xl md:text-6xl font-semibold text-white leading-snug"
+        >
+          Manufacturer of Electrical Stamping, Die Casted Rotor & Sheet Metal
+          Components
+        </h1>
+
+        <p className="mt-6 text-lg md:text-xl text-white leading-relaxed max-w-3xl">
+          Since 1985, <strong>ASA Industries</strong> has been a trusted{" "}
+          <strong>Stamping Manufacturer</strong> and{" "}
+          <strong>Die Casting Company in Noida</strong>, delivering excellence
+          in <strong>Rotor</strong>, <strong>Stator</strong>,{" "}
+          <strong>Electrical Stamping</strong>, <strong>Motor Stamping</strong>,{" "}
+          and <strong>Sheet Metal Components</strong>.  
+          We specialize in{" "}
+          <strong>Die Casted Components</strong>,{" "}
+          <strong>Progressive Die</strong>, <strong>Stamping Tooling</strong>,{" "}
+          <strong>Lamination Stamping Process</strong>,{" "}
+          <strong>Stamping Dies</strong>, and{" "}
+          <strong>Induction Motors</strong>.  
+          Our expertise covers{" "}
+          <strong>Brushless DC Motors</strong>,{" "}
+          <strong>Universal Motors</strong>,{" "}
+          <strong>Shaded Pole Motors</strong>,{" "}
+          <strong>Ceiling Fan Covers</strong>, and{" "}
+          <strong>Magnetic Core Manufacturing</strong> — making us one of the
+          leading <strong>Electrical Stamping Manufacturers</strong> worldwide.
+        </p>
+
+        {/* Call to Action */}
+        <a
+          href="#products"
+          className="mt-8 inline-block bg-white text-[#000C56] px-6 py-3 rounded-2xl font-medium shadow-md hover:bg-gray-100 transition"
+        >
+          Explore Our Products
+        </a>
+      </div>
     </section>
   );
 };
