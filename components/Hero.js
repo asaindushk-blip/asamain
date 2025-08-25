@@ -21,13 +21,13 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-24">
-        <h1
+        <h3
           id="hero-heading"
           className="text-4xl md:text-6xl font-semibold text-white leading-snug"
         >
           Manufacturer of Electrical Stamping, Die Casted Rotor & Sheet Metal
           Components for Electrical Appliances
-        </h1>
+        </h3>
 
         <p className="mt-4 text-lg md:text-xl text-white leading-relaxed max-w-3xl">
           <strong>ASA Industries</strong> has been delivering excellence since
