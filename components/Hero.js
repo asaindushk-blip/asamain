@@ -19,40 +19,40 @@ const Hero = () => {
         />
       </div>
 
-      {/* Hero Content */}
+      {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-24">
         <h1
           id="hero-heading"
           className="text-4xl md:text-6xl font-semibold text-white leading-snug"
         >
           Manufacturer of Electrical Stamping, Die Casted Rotor & Sheet Metal
-          Components
+          Components for Electrical Appliances
         </h1>
 
         <p className="mt-6 text-lg md:text-xl text-white leading-relaxed max-w-3xl">
-          Since 1985, <strong>ASA Industries</strong> has been a leading{" "}
+          <strong>ASA Industries</strong> has been delivering excellence since
+          1985 as a trusted{" "}
           <strong>Stamping Manufacturer</strong> and{" "}
-          <strong>Die Casting Company in Noida</strong>, specializing in{" "}
+          <strong>Die Casting Company in Noida</strong>. We specialize in{" "}
           <strong>Rotor</strong>, <strong>Stator</strong>,{" "}
           <strong>Electrical Stamping</strong>,{" "}
-          <strong>Motor Stamping</strong>, and{" "}
-          <strong>Sheet Metal Components</strong> for{" "}
-          <strong>Electrical Appliances</strong>.  
-          We provide world-class{" "}
-          <strong>Die Casted Components</strong>,{" "}
-          <strong>Progressive Die</strong>, <strong>Stamping Tooling</strong>,{" "}
+          <strong>Motor Stamping</strong>,{" "}
+          <strong>Sheet Metal Components</strong>, and{" "}
+          <strong>Die Casted Components</strong>.  
+          Our capabilities include{" "}
+          <strong>Stamping Manufacturing</strong>,{" "}
+          <strong>Electrical Stamping Manufacturers</strong>,{" "}
           <strong>Lamination Stamping Process</strong>,{" "}
-          <strong>Stamping Dies</strong>, and{" "}
-          <strong>Stamping Manufacturing</strong> solutions.  
-          Our expertise extends to{" "}
+          <strong>Stamping Dies</strong>,{" "}
+          <strong>Progressive Die</strong>, and{" "}
+          <strong>Stamping Tooling</strong>.  
+          We proudly serve industries requiring{" "}
           <strong>Induction Motors</strong>,{" "}
           <strong>Brushless DC Motors</strong>,{" "}
           <strong>Universal Motors</strong>,{" "}
           <strong>Shaded Pole Motors</strong>,{" "}
-          <strong>Ceiling Fan Covers</strong>, and the{" "}
-          <strong>Manufacture of Magnetic Cores</strong>, making us one of the
-          most reliable <strong>Electrical Stamping Manufacturers</strong> in
-          the industry.
+          <strong>Ceiling Fan Covers</strong>, and are a leading{" "}
+          <strong>Manufacturer of Magnetic Cores</strong>.
         </p>
 
         {/* Call to Action */}
