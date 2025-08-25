@@ -19,7 +19,7 @@ const Hero = () => {
         className="absolute mx-auto text-4xl md:text-6xl font-bold text-left text-white md:w-3/5 md:top-72 top-60 leading-tight"
         style={{ left: "5%" }}
       >
-        Manufacturer of Electrical Stamping,<br /> Die Casted Rotor & Sheet Metal Components
+        Leading Manufacturer of Electrical Stamping,<br /> Die Casted Rotor & Sheet Metal Components
       </h1>
 
       {/* Supporting SEO-friendly Description */}
