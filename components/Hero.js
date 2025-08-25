@@ -28,10 +28,7 @@ const Hero = () => {
         style={{ left: "5%" }}
       >
         ASA Industries – Delivering Excellence Since 1985. <br />
-        We specialize in <strong>Rotor, Stator, Motor Stamping, Progressive Die, Stamping Tooling,</strong> and{" "}
-        <strong>Lamination Stamping Process</strong> for <strong>Induction Motors, Brushless DC Motors, Universal Motors, Shaded Pole Motors, and Ceiling Fan Covers.</strong>  
-        Trusted <strong>Die Casting Company in Noida</strong> and a leading <strong>Manufacturer of Magnetic Cores</strong>.
-      </p>
+        
     </section>
   );
 };
