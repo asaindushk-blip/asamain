@@ -27,11 +27,12 @@ const Hero_Process = () => {
 
       {/* Hidden SEO Keywords */}
       <span className="sr-only">
-        motor components, rotor stator, electrical stamping, motor stamping, stamping manufacturer,
-        stamping manufacturers, stamping manufacturing, electrical stamping manufacturers,
-        lamination stamping process, stamping dies, progressive die, stamping tooling, induction motors,
-        sheet metal, die casting, brushless dc motors, universal motors, shaded pole motors,
-        die casting company in Noida
+        Manufacturer of Electrical Stamping, Die Casted Rotor and Sheet Metal Components for Electrical Appliances, 
+        Rotor, Stator, Electrical Stamping, Motor stamping, Stamping Manufacturer, Stamping Manufacturers, 
+        stamping manufacturing, electrical stamping manufacturers, lamination stamping process, stamping dies, 
+        progressive die, stamping tooling, induction motors, sheet metal, die casting, Sheet Metal Components, 
+        Die Casted Components, Brushless DC motors, Universal motors, Shaded pole motors, Ceiling Fan Cover, 
+        Die casting company in Noida, Manufacturer of magnetic cores.
       </span>
     </section>
   );
