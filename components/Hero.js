@@ -23,11 +23,7 @@ const Hero = () => {
       </h1>
 
       {/* Supporting SEO-friendly Description */}
-      <p
-        className="absolute mx-auto text-lg md:text-xl font-light text-left text-gray-200 md:w-3/5 md:top-[420px] top-[360px]"
-        style={{ left: "5%" }}
-      >
-        ASA Industries – Delivering Excellence Since 1985. <br />
+  >
         
     </section>
   );
