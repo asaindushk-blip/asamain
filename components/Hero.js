@@ -29,7 +29,7 @@ const Hero = () => {
           Components for Electrical Appliances
         </h1>
 
-        <p className="mt-6 text-lg md:text-xl text-white leading-relaxed max-w-3xl">
+        <p className="mt-4 text-lg md:text-xl text-white leading-relaxed max-w-3xl">
           <strong>ASA Industries</strong> has been delivering excellence since
           1985 as a trusted{" "}
           <strong>Stamping Manufacturer</strong> and{" "}
