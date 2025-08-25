@@ -9,7 +9,7 @@ const Hero = () => {
       <img
         src="hero.png"
         alt="Manufacturer of Electrical Stamping, Die Casted Rotor, Stator, and Sheet Metal Components for Electrical Appliances"
-        title="ASA Industries - Leading Stamping Manufacturer and Die Casting Company in Noida"
+        title="ASA Industries - Electrical Stamping Manufacturer and Die Casting Company in Noida"
         className="opacity-40 filter brightness-75 drop-shadow-md saturate-60 w-full h-auto"
         loading="eager"
       />
