@@ -59,6 +59,15 @@ const Hero = () => {
           Explore Our Products
         </a>
       </div>
+            {/* Hidden SEO Keywords */}
+      <span className="sr-only">
+        Manufacturer of Electrical Stamping, Die Casted Rotor and Sheet Metal Components for Electrical Appliances, 
+        Rotor, Stator, Electrical Stamping, Motor stamping, Stamping Manufacturer, Stamping Manufacturers, 
+        stamping manufacturing, electrical stamping manufacturers, lamination stamping process, stamping dies, 
+        progressive die, stamping tooling, induction motors, sheet metal, die casting, Sheet Metal Components, 
+        Die Casted Components, Brushless DC motors, Universal motors, Shaded pole motors, Ceiling Fan Cover, 
+        Die casting company in Noida, Manufacturer of magnetic cores.
+      </span>
     </section>
   );
 };
