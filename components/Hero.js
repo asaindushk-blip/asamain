@@ -1,66 +1,132 @@
+const slides = [
+  {
+    image: "hero1.png",
+    alt: "ASA Industries Rotor and Stator Components",
+    heading: "Delivering Excellence Since 1985",
+    description:
+      "Leading Manufacturer of Rotor, Stator, Sheet Metal and Die-Casted Components.",
+  },
+  {
+    image: "hero2.png",
+    alt: "Electrical Stamping Manufacturer",
+    heading: "Precision Engineering at Scale",
+    description:
+      "High-quality stamping, die-casting, and motor components trusted worldwide.",
+  },
+  {
+    image: "hero3.png",
+    alt: "Motor Lamination Manufacturing",
+    heading: "Innovation That Drives Motors",
+    description:
+      "Supplying global industries with innovative motor solutions.",
+  },
+  {
+    image: "hero4.png",
+    alt: "Sheet Metal Components",
+    heading: "Cutting-Edge Sheet Metal Solutions",
+    description:
+      "Reliable and durable sheet metal components for industrial use.",
+  },
+  {
+    image: "hero5.png",
+    alt: "Die Casting and Tooling",
+    heading: "Excellence in Die Casting",
+    description:
+      "Expertise in progressive tooling and die casting for modern industries.",
+  },
+];
+
 const Hero = () => {
+  const [current, setCurrent] = useState(0);
+
+  // Auto slide every 5 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const prevSlide = () => {
+    setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+  };
+
+  const nextSlide = () => {
+    setCurrent((prev) => (prev + 1) % slides.length);
+  };
+
   return (
     <section
-      id="intro"
-      className="relative grid w-screen grid-rows-1 bg-[#000C56] lg:top-20 top-0"
-      aria-labelledby="hero-heading"
+      id="Intro"
+      className="relative w-screen h-[90vh] overflow-hidden bg-[#000C56]"
     >
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <Image
-          src="/hero.png"
-          alt="Manufacturer of Electrical Stamping, Die Casted Rotor, Stator and Sheet Metal Components for Electrical Appliances"
-          title="ASA Industries - Stamping Manufacturer and Die Casting Company in Noida"
-          className="opacity-40 filter brightness-75 drop-shadow-md saturate-60 object-cover"
-          fill
-          priority
-        />
+      {/* Slides */}
+      {slides.map((slide, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+            index === current ? "opacity-100 z-10" : "opacity-0 z-0"
+          }`}
+        >
+          <img
+            src={slide.image}
+            alt={slide.alt}
+            className="w-full h-full object-cover brightness-75"
+            loading="lazy"
+          />
+
+          {/* Slide Content */}
+          {index === current && (
+            <div className="absolute top-1/3 left-[5%] w-4/5 md:w-3/5 text-white drop-shadow-lg">
+              <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+                {slide.heading}
+              </h1>
+              <p className="mt-4 text-lg md:text-xl font-light">
+                {slide.description}
+              </p>
+            </div>
+          )}
+        </div>
+      ))}
+
+      {/* Navigation Arrows */}
+      <button
+        onClick={prevSlide}
+        aria-label="Previous Slide"
+        className="absolute top-1/2 left-5 transform -translate-y-1/2 bg-black/40 hover:bg-black/70 p-3 rounded-full text-white"
+      >
+        <ChevronLeft size={28} />
+      </button>
+      <button
+        onClick={nextSlide}
+        aria-label="Next Slide"
+        className="absolute top-1/2 right-5 transform -translate-y-1/2 bg-black/40 hover:bg-black/70 p-3 rounded-full text-white"
+      >
+        <ChevronRight size={28} />
+      </button>
+
+      {/* Dots Navigation */}
+      <div className="absolute bottom-8 w-full flex justify-center gap-3">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrent(index)}
+            className={`w-3 h-3 rounded-full transition-all ${
+              index === current ? "bg-white scale-110" : "bg-gray-400"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          ></button>
+        ))}
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-24">
-        <h3
-          id="hero-heading"
-          className="text-4xl md:text-6xl font-semibold text-white leading-snug"
-        >
-          Manufacturer of Electrical Stamping, Die Casted Rotor & Sheet Metal
-          Components for Electrical Appliances
-        </h3>
-
-        <p className="mt-4 text-lg md:text-xl text-white leading-relaxed max-w-3xl">
-          <strong>ASA Industries</strong> has been delivering excellence since
-          1985 as a trusted{" "}
-          <strong>Stamping Manufacturer</strong> and{" "}
-          <strong>Die Casting Company in Noida</strong>. We specialize in{" "}
-          <strong>Rotor</strong>, <strong>Stator</strong>,{" "}
-          <strong>Electrical Stamping</strong>,{" "}
-          <strong>Motor Stamping</strong>,{" "}
-          <strong>Sheet Metal Components</strong>, and{" "}
-          <strong>Die Casted Components</strong>.  
-          Our capabilities include{" "}
-          <strong>Stamping Manufacturing</strong>,{" "}
-          <strong>Electrical Stamping Manufacturers</strong>,{" "}
-          <strong>Lamination Stamping Process</strong>,{" "}
-          <strong>Stamping Dies</strong>,{" "}
-          <strong>Progressive Die</strong>, and{" "}
-          <strong>Stamping Tooling</strong>.  
-          We proudly serve industries requiring{" "}
-          <strong>Induction Motors</strong>,{" "}
-          <strong>Brushless DC Motors</strong>,{" "}
-          <strong>Universal Motors</strong>,{" "}
-          <strong>Shaded Pole Motors</strong>,{" "}
-          <strong>Ceiling Fan Covers</strong>, and are a leading{" "}
-          <strong>Manufacturer of Magnetic Cores</strong>.
-        </p>
-
-        {/* Call to Action */}
-        <a
-          href="#products"
-          className="mt-8 inline-block bg-white text-[#000C56] px-6 py-3 rounded-2xl font-medium shadow-md hover:bg-gray-100 transition"
-        >
-          Explore Our Products
-        </a>
-      </div>
+      {/* Hidden SEO Keywords */}
+      <span className="sr-only">
+        motor components, rotor stator, electrical stamping, motor stamping, stamping manufacturer,
+        stamping manufacturers, stamping manufacturing, electrical stamping manufacturers,
+        lamination stamping process, stamping dies, progressive die, stamping tooling,
+        induction motors, sheet metal, die casting, brushless dc motors, universal motors,
+        shaded pole motors, die casting company in Noida
+      </span>
     </section>
   );
 };
