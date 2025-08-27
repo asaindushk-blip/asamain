@@ -1,31 +1,98 @@
-const Hero = () => {
+import React, { useState, useEffect } from "react";
+
+const slides = [
+  {
+    image: "hero1.png",
+    alt: "Manufacturer of Electrical Stamping, Die Casted Rotor, and Sheet Metal Components",
+    title: "ASA Industries - Electrical Stamping Manufacturer",
+    headline: "Leading Manufacturer of Electrical Stamping, Die Casted Rotor & Sheet Metal Components",
+    description: "Supplying high-quality stamping, rotor, stator, and sheet metal components for electrical appliances."
+  },
+  {
+    image: "hero2.png",
+    alt: "High precision motor stamping and rotor lamination",
+    title: "Motor Stamping and Lamination Manufacturer",
+    headline: "Precision Stamping & Rotor Lamination for Motors",
+    description: "Trusted supplier for induction motors, BLDC motors, shaded pole motors and universal motors."
+  },
+  {
+    image: "hero3.png",
+    alt: "Sheet Metal Components and Die Casting",
+    title: "Sheet Metal and Die Casting Manufacturer",
+    headline: "Sheet Metal & Die Casted Components for Industries",
+    description: "Delivering reliable sheet metal components and die-cast rotors for appliances and machinery."
+  },
+  {
+    image: "hero4.png",
+    alt: "Progressive die stamping process",
+    title: "Progressive Die and Tooling",
+    headline: "Progressive Die & Stamping Tooling Experts",
+    description: "Expertise in lamination stamping process, stamping dies and tooling solutions."
+  },
+  {
+    image: "hero5.png",
+    alt: "Electrical stamping manufacturing unit",
+    title: "Electrical Stamping Manufacturing Plant",
+    headline: "State-of-the-Art Electrical Stamping Manufacturing",
+    description: "Manufacturing excellence with advanced stamping technology in Noida, India."
+  }
+];
+
+const Hero: React.FC = () => {
+  const [current, setCurrent] = useState(0);
+
+  // Auto-slide every 5s
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section
       id="intro"
-      className="relative grid w-screen grid-rows-1 bg-[#000C56] lg:top-20 top-0 md:object-cover"
+      className="relative w-screen h-[600px] overflow-hidden bg-[#000C56]"
       aria-label="ASA Industries - Manufacturer of Electrical Stamping, Die Casted Rotor, and Sheet Metal Components"
     >
-      {/* SEO Optimized Hero Image */}
-      <img
-        src="hero.png"
-        alt="Manufacturer of Electrical Stamping, Die Casted Rotor, Stator, and Sheet Metal Components for Electrical Appliances"
-        title="ASA Industries - Electrical Stamping Manufacturer and Die Casting Company in Noida"
-        className="opacity-40 filter brightness-75 drop-shadow-md saturate-60 w-full h-auto"
-        loading="eager"
-      />
+      {slides.map((slide, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 transition-opacity duration-1000 ${
+            index === current ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <img
+            src={slide.image}
+            alt={slide.alt}
+            title={slide.title}
+            className="w-full h-full object-cover opacity-50"
+            loading={index === 0 ? "eager" : "lazy"}
+          />
+          <div className="absolute top-1/3 left-[5%] w-3/5 text-white">
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight drop-shadow-lg">
+              {slide.headline}
+            </h1>
+            <p className="mt-4 text-lg md:text-xl drop-shadow-md">
+              {slide.description}
+            </p>
+          </div>
+        </div>
+      ))}
 
-      {/* SEO Optimized Headline */}
-      <h1
-        className="absolute mx-auto text-4xl md:text-2xl font-bold text-left text-white md:w-3/5 md:top-72 top-60 leading-tight"
-        style={{ left: "5%" }}
-      >
-        Leading Manufacturer of Electrical Stamping,</br> 
-        Die Casted Rotor & Sheet Metal Components
-      </h1>
-
-      {/* Supporting SEO-friendly Description */}
-  >
-        
+      {/* Carousel Controls */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-3">
+        {slides.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => setCurrent(idx)}
+            className={`w-4 h-4 rounded-full ${
+              current === idx ? "bg-white" : "bg-gray-400"
+            }`}
+            aria-label={`Go to slide ${idx + 1}`}
+          />
+        ))}
+      </div>
     </section>
   );
 };
