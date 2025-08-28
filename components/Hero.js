@@ -24,17 +24,52 @@ const slides = [
   },
   {
     image: "hero4.png",
-    alt: "Progressive die stamping process",
+    alt: "Progressive die stamping process and tooling",
     title: "Progressive Die and Tooling",
     headline: "Progressive Die & Stamping Tooling Experts",
     description: "Expertise in lamination stamping process, stamping dies and tooling solutions."
   },
   {
     image: "hero5.png",
-    alt: "Electrical stamping manufacturing unit",
+    alt: "Electrical stamping manufacturing plant in Noida",
     title: "Electrical Stamping Manufacturing Plant",
     headline: "State-of-the-Art Electrical Stamping Manufacturing",
     description: "Manufacturing excellence with advanced stamping technology in Noida, India."
+  },
+  {
+    image: "hero6.png",
+    alt: "BLDC motor stamping components",
+    title: "BLDC Motor Stamping Manufacturer",
+    headline: "High-Precision BLDC Motor Stamping Solutions",
+    description: "Supplying BLDC motor stamping and lamination components for energy-efficient motors."
+  },
+  {
+    image: "hero7.png",
+    alt: "Universal motor rotor and stator stamping",
+    title: "Universal Motor Stamping",
+    headline: "Rotor & Stator Stamping for Universal Motors",
+    description: "Reliable rotor and stator stamping for household and industrial universal motors."
+  },
+  {
+    image: "hero8.png",
+    alt: "Shaded pole motor stamping process",
+    title: "Shaded Pole Motor Components",
+    headline: "Durable Stamping for Shaded Pole Motors",
+    description: "Manufacturing shaded pole motor components with high durability and precision."
+  },
+  {
+    image: "hero9.png",
+    alt: "Induction motor stamping manufacturer",
+    title: "Induction Motor Stamping",
+    headline: "Lamination Stamping for Induction Motors",
+    description: "Providing induction motor stamping and lamination for industrial and commercial use."
+  },
+  {
+    image: "hero10.png",
+    alt: "Die casting and sheet metal stamping components exporter",
+    title: "Die Casting & Sheet Metal Exporter",
+    headline: "Global Supplier of Stamping & Die-Cast Components",
+    description: "Exporting sheet metal, electrical stamping, and die-cast rotors worldwide."
   }
 ];
 
