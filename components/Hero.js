@@ -2,19 +2,22 @@ import React, { useState, useEffect } from "react";
 
 const slides = [
   {
-    image: "hero1.png",
+    image: "/hero1.png",
     alt: "Manufacturer of Electrical Stamping, Die Casted Rotor, and Sheet Metal Components",
     title: "ASA Industries - Electrical Stamping Manufacturer",
     headline: "Leading Manufacturer of Electrical Stamping, Die Casted Rotor & Sheet Metal Components",
     description: "Supplying high-quality stamping, rotor, stator, and sheet metal components for electrical appliances."
   },
   {
-    image: "hero2.png",
+    image: "/hero2.png",
     alt: "High precision motor stamping and rotor lamination",
     title: "Motor Stamping and Lamination Manufacturer",
     headline: "Precision Stamping & Rotor Lamination for Motors",
     description: "Trusted supplier for induction motors, BLDC motors, shaded pole motors and universal motors."
   },
+  // ... rest of the 10 slides
+];
+
   {
     image: "hero3.png",
     alt: "Sheet Metal Components and Die Casting",
